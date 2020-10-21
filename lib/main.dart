@@ -59,14 +59,15 @@ class _MyApp2State extends State<MyApp2> {
 
   @override
   Widget build(BuildContext context) {
+    print("App is starting");
     return Scaffold(
       body: StreamBuilder(
           stream: FirebaseFirestore.instance.collection('appURL').snapshots(),
           builder: (context, snapshot) {
             if (!snapshot.data)
               return Text(
-                'Loadingg',
-                style: TextStyle(fontSize: 30),
+                'Loading',
+                style: TextStyle(fontSize: 50),
               );
             return Center(
                 child: Container(
