@@ -34,26 +34,26 @@ class MyApp2 extends StatefulWidget {
 }
 
 class _MyApp2State extends State<MyApp2> {
-  // bool _initialized = false;
-  // bool _error = false;
-  //
-  // // Define an async function to initialize FlutterFire
-  // // @override
-  //
-  // void initializeFlutterFire() async {
-  //   try {
-  //     // Wait for Firebase to initialize and set `_initialized` state to true
-  //     await Firebase.initializeApp();
-  //     setState(() {
-  //       _initialized = true;
-  //     });
-  //   } catch (e) {
-  //     // Set `_error` state to true if Firebase initialization fails
-  //     setState(() {
-  //       _error = true;
-  //     });
-  //   }
-  // }
+  bool _initialized = false;
+  bool _error = false;
+  
+  // Define an async function to initialize FlutterFire
+  // @override
+  
+  void initializeFlutterFire() async {
+    try {
+      // Wait for Firebase to initialize and set `_initialized` state to true
+      await Firebase.initializeApp();
+      setState(() {
+        _initialized = true;
+      });
+    } catch (e) {
+      // Set `_error` state to true if Firebase initialization fails
+      setState(() {
+        _error = true;
+      });
+    }
+  }
 
   // @override
   // void initState() {
